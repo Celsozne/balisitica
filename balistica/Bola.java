@@ -1,6 +1,6 @@
 package balistica;
 
-public class Bola {
+public class Bola extends input{
 
     private int raio=10; // Raio da bola em pixels
     private int x =0; // Posição X da bola
@@ -45,7 +45,7 @@ public class Bola {
     }
     void movimentoY(){
         for (double t0 = 0; t0 <= 100; t0 += 0.1) {
-            double y = 0;
+            double y = 0 + (tx_v0)
         }
     }
 
