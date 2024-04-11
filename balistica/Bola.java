@@ -1,6 +1,6 @@
 package balistica;
 
-public class bola {
+public class Bola {
 
     private int raio=10; // Raio da bola em pixels
     private int x =0; // Posição X da bola
@@ -37,6 +37,18 @@ public class bola {
     public void setY(int y) {
         this.y = y;
     }
+
+    void movimentoX() {
+        for (double t0 = 0; t0 <= 100; t0 += 0.1) {
+            double x = 0;
+        }
+    }
+    void movimentoY(){
+        for (double t0 = 0; t0 <= 100; t0 += 0.1) {
+            double y = 0;
+        }
+    }
+
 
 
 }
