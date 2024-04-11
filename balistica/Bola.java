@@ -7,7 +7,7 @@ public class Bola {
     private int y=0; // Posição Y da bola
 
     // Construtor para inicializar a bola
-    public bola(int raio, int x, int y) {
+    public Bola(int raio, int x, int y) {
         this.raio = raio;
         this.x = x;
         this.y = y;
