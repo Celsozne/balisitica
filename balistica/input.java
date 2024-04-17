@@ -11,6 +11,9 @@ public class input extends JFrame {
     private JButton enviar;
     float v0;
     float theta;
+    float x;
+    float y;
+    float g = (float) 9.8;
 
     public input() {
         setContentPane(tela);
@@ -21,21 +24,23 @@ public class input extends JFrame {
         enviar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                float v0 = Float.parseFloat(tx_v0.getText());
-                float theta;
+                 v0 = Float.parseFloat(tx_v0.getText());
                 theta = Float.parseFloat(txteta.getText());
+                movimentoX();
+                movimentoY();
+                System.out.println(x + y);
             }
         });
 
     }
      void movimentoX() {
-        for (double t0 = 0; t0 <= 100; t0 += 0.1) {
-            double x = 0 + (v0*Math.cos(theta)*t0);
+        for (float t0 = (float) 0.1; t0 <= 100; t0 += 0.1) {
+            float x = (float) (0 + (v0*Math.cos(theta)*t0));
+            System.out.println(x);
         }
     }
     void movimentoY(){
-        for (float t0 = 0; t0 <= 100; t0 += 0.1F) {
-            float g = 9.8F;
+        for (float t0 = (float) 0.1; t0 <= 100; t0 += 0.1F) {
             float y = (float) (0 + (v0* Math.sin(theta)*t0) - g*Math.pow(t0,2));
         }
     }
