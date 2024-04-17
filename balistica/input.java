@@ -9,6 +9,8 @@ public class input extends JFrame {
     private JTextField txteta;
     private JPanel tela;
     private JButton enviar;
+    float v0;
+    float theta;
 
     public input() {
         setContentPane(tela);
@@ -26,12 +28,12 @@ public class input extends JFrame {
         });
 
     }
-     void movimentoX(float theta, double v0) {
+     void movimentoX() {
         for (double t0 = 0; t0 <= 100; t0 += 0.1) {
             double x = 0 + (v0*Math.cos(theta)*t0);
         }
     }
-    void movimentoY(float theta, double v0){
+    void movimentoY(){
         for (float t0 = 0; t0 <= 100; t0 += 0.1F) {
             float g = 9.8F;
             float y = (float) (0 + (v0* Math.sin(theta)*t0) - g*Math.pow(t0,2));
