@@ -39,10 +39,11 @@ public class input extends JFrame {
             System.out.println(x);
         }
     }
-    void movimentoY(){
+    void movimentoY(v0, theta){
         for (float t0 = (float) 0.1; t0 <= 100; t0 += 0.1F) {
             float y = (float) (0 + (v0* Math.sin(theta)*t0) - g*Math.pow(t0,2));
         }
+        return y;
     }
 
 
