@@ -18,7 +18,7 @@ public class bola {
         for (float t0 = 0; t0 < 100; t0+= 0.1F) {
             float y = (float) ((float) 0 + (velocidade*Math.sin(angulo)*t0) + (g*Math.pow(t0,2)));
             y = posicaoy;
-            if (y >0) {
+            if (posicaoy >0) {
                 break;
             }
             }

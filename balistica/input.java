@@ -24,7 +24,7 @@ public class input extends JFrame {
         enviar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                 v0 = Float.parseFloat(tx_v0.getText());
+                v0 = Float.parseFloat(tx_v0.getText());
                 theta = Float.parseFloat(txteta.getText());
                 movimentoX();
                 movimentoY();
@@ -33,25 +33,34 @@ public class input extends JFrame {
         });
 
     }
-     void movimentoX() {
+
+    void movimentoX() {
         for (float t0 = (float) 0.1; t0 <= 100; t0 += 0.1) {
-            float x = (float) (0 + (v0*Math.cos(theta)*t0));
+            float x = (float) (0 + (v0 * Math.cos(theta) * t0));
             System.out.println(x);
+            if (y < 0) {
+                break;
+            }
+            return;
         }
     }
-    void movimentoY(v0, theta){
-        for (float t0 = (float) 0.1; t0 <= 100; t0 += 0.1F) {
-            float y = (float) (0 + (v0* Math.sin(theta)*t0) - g*Math.pow(t0,2));
+        void movimentoY () {
+            for (float t0 = (float) 0.1; t0 <= 100; t0 += 0.1F) {
+                float w = (float) (0 + (v0 * Math.sin(theta) * t0) - g * Math.pow(t0, 2));
+                w = y;
+                if (y < 0) {
+                    break;
+                }
+            }
+            return;
         }
-        return y;
+
+
+        public static void main (String[]args){
+            input myframe = new input();
+
+        }
     }
-
-
-    public static void main(String[] args) {
-        input myframe = new input();
-
-    }
-}
 
 
 
